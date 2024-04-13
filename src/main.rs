@@ -33,9 +33,9 @@ fn main() {
     }
 
     while !rl.window_should_close() {
-        let mut boids = flock.to_vec();
+        let boids = flock.to_vec();
         for boid in flock.iter_mut() {
-            boid.update(&mut boids, NBOIDS);
+            boid.update(&boids, NBOIDS);
         }
 
         let mut ctx = rl.begin_drawing(&thread);
