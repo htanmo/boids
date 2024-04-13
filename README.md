@@ -4,7 +4,10 @@
 
 ## Prerequisites
 
-- [Raylib](https://www.raylib.com/)
+- Raylib
+  - [Windows](https://github.com/raysan5/raylib/wiki/Working-on-Windows)
+  - [macOS](https://github.com/raysan5/raylib/wiki/Working-on-macOS)
+  - [GNU Linux](https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux)
 - [Cmake](https://cmake.org/download/)
 
 ## Build & Run
