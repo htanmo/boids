@@ -239,12 +239,7 @@ impl Boid {
                 screenpos[i].y + self.origin.y,
             );
         }
-        ctx.draw_triangle(
-            screenpos[0],
-            screenpos[1],
-            screenpos[2],
-            Color::from_hex("fb6f92").unwrap(),
-        );
+        ctx.draw_triangle(screenpos[0], screenpos[1], screenpos[2], Color::PINK);
         ctx.draw_triangle_lines(screenpos[0], screenpos[1], screenpos[2], Color::BLACK);
     }
 }
