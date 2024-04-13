@@ -201,6 +201,19 @@ impl Boid {
             unsafe { fmod(self.origin.y as f64 + std::f64::consts::PI, HEIGHT as f64) as f32 }
                 - std::f32::consts::PI;
 
+        if self.origin.x < 0.0 {
+            self.origin.x += WIDTH as f32;
+        }
+        if self.origin.x > WIDTH as f32 {
+            self.origin.x -= WIDTH as f32;
+        }
+        if self.origin.y < 0.0 {
+            self.origin.y += HEIGHT as f32;
+        }
+        if self.origin.y > HEIGHT as f32 {
+            self.origin.y -= HEIGHT as f32;
+        }
+
         self.last_update = now;
     }
 
@@ -226,7 +239,12 @@ impl Boid {
                 screenpos[i].y + self.origin.y,
             );
         }
-        ctx.draw_triangle(screenpos[0], screenpos[1], screenpos[2], Color::PINK);
+        ctx.draw_triangle(
+            screenpos[0],
+            screenpos[1],
+            screenpos[2],
+            Color::from_hex("fb6f92").unwrap(),
+        );
         ctx.draw_triangle_lines(screenpos[0], screenpos[1], screenpos[2], Color::BLACK);
     }
 }

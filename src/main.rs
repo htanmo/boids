@@ -44,6 +44,6 @@ fn main() {
             boid.draw(&mut ctx);
         }
 
-        ctx.clear_background(Color::WHITE);
+        ctx.clear_background(Color::from_hex("353535").unwrap());
     }
 }
