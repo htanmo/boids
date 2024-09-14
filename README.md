@@ -5,7 +5,7 @@
 
 ## Screenshot
 
-![simulation](./boids.png)
+![simulation](./simulation.png)
 
 ## Prerequisites
 
